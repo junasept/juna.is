@@ -1,0 +1,9 @@
+:root {
+	--global-bg: var(--color-light);
+	--global-text: var(--color-dark);
+}
+
+[data-user-theme="dark"] {
+	--global-bg: var(--color-dark);
+	--global-text: var(--color-light);
+}
