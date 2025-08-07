@@ -1,0 +1,31 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+	title: string;
+	description: string;
+	ogImage?: string;
+	ogAlt?: string;
+}
+
+const { title, description, ogImage, ogAlt } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} ogImage={ogImage} ogAlt={ogAlt}>
+    <main>
+        <slot />
+    </main>
+</BaseLayout>
+
+<style>
+	body{
+		height: 100svh;
+	}
+	main {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: auto;
+	}
+</style>
